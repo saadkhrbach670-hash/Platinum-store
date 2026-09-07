@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجرنا - عرض خاص واستثنائي</title>
+    <title>المروحة المحمولة العجيبة 2 في 1</title>
     <!-- Google Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,12 +24,13 @@
 
         /* BANNER TOP */
         .top-bar {
-            background: #ef4444;
+            background: #2563eb;
             color: #ffffff;
             text-align: center;
-            padding: 8px 15px;
+            padding: 10px 15px;
             font-weight: 700;
-            font-size: 0.95rem;
+            font-size: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
         /* CONTAINER */
@@ -43,7 +44,7 @@
             background: #ffffff;
             border-radius: 16px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            padding: 20px;
+            padding: 25px;
             margin-bottom: 25px;
         }
 
@@ -51,24 +52,30 @@
             font-size: 1.8rem;
             font-weight: 800;
             color: #1e293b;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             text-align: center;
         }
 
-        /* MEDIA PLACEHOLDERS */
-        .media-container {
-            width: 100%;
-            border-radius: 12px;
-            overflow: hidden;
+        .product-subtitle {
+            text-align: center;
+            color: #64748b;
+            font-size: 1.05rem;
             margin-bottom: 20px;
-            background: #e2e8f0;
-            position: relative;
         }
 
-        .product-video, .product-image {
+        /* MEDIA GALLERY */
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .gallery-img {
             width: 100%;
-            display: block;
             border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            object-fit: cover;
         }
 
         /* PRICE DISPLAY */
@@ -79,20 +86,49 @@
             gap: 15px;
             margin: 20px 0;
             background: #f1f5f9;
-            padding: 12px;
-            border-radius: 10px;
+            padding: 15px;
+            border-radius: 12px;
         }
 
         .current-price {
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 800;
             color: #16a34a;
         }
 
         .old-price {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             color: #94a3b8;
             text-decoration: line-through;
+        }
+
+        .badge {
+            background: #ef4444;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        /* FEATURES LIST */
+        .details-list {
+            list-style: none;
+            margin: 20px 0;
+            padding: 0;
+        }
+
+        .details-list li {
+            padding: 10px 0;
+            border-bottom: 1px id #f1f5f9;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.05rem;
+        }
+
+        .details-list li i {
+            color: #2563eb;
         }
 
         /* ORDER FORM */
@@ -138,7 +174,7 @@
 
         .submit-btn {
             width: 100%;
-            background: #2563eb;
+            background: #16a34a;
             color: #ffffff;
             border: none;
             padding: 15px;
@@ -154,7 +190,7 @@
         }
 
         .submit-btn:hover {
-            background: #1d4ed8;
+            background: #15803d;
         }
 
         /* ADVANTAGES */
@@ -184,42 +220,46 @@
 
     <!-- TOP ANNOUNCEMENT BAR -->
     <div class="top-bar">
-        ⚡ التوصيل مجاني لجميع المدن + الدفع عند الاستلام ⚡
+        ✨ ادفع مسبقاً براحة بال.. يوصلك منتجك أينما صال وجال! ✨
     </div>
 
     <div class="container">
         
         <!-- PRODUCT DETAILS CARD -->
         <div class="product-card">
-            <h1 class="product-title" id="product-name">اسم المنتج يوضع هنا</h1>
+            <h1 class="product-title">مروحة جيب محمولة 2 في 1 (طقم قطعتين)</h1>
+            <p class="product-subtitle">العرض يشمل قطعتين: أسود أنيق × وردي لطيف 🌸🖤</p>
             
-            <!-- VIDEO PLACEHOLDER -->
-            <div class="media-container">
-                <video class="product-video" controls autoplay muted loop id="main-video">
-                    <source src="product-video.mp4" type="video/mp4">
-                    متصفحك لا يدعم تشغيل الفيديو.
-                </video>
-            </div>
-
             <!-- PRICE DISPLAY -->
             <div class="price-box">
-                <span class="current-price" id="price-display">200 درهم</span>
-                <span class="old-price" id="old-price-display">350 درهم</span>
+                <span class="current-price">250 درهم</span>
+                <span class="old-price">350 درهم</span>
+                <span class="badge">توفير 100 درهم</span>
             </div>
 
-            <!-- IMAGE PLACEHOLDER -->
-            <div class="media-container">
-                <img src="product-image.jpg" alt="صورة المنتج" class="product-image" id="main-image">
+            <!-- PRODUCT GALLERY IMAGES -->
+            <div class="gallery">
+                <img src="image1.jpg" alt="المروحة المحمولة - أبعاد المنتج" class="gallery-img">
+                <img src="image2.jpg" alt="المروحة المحمولة - 3 سرعات قوة الرياح" class="gallery-img">
+                <img src="image3.jpg" alt="المروحة المحمولة - سهولة الاستخدام وشحن USB" class="gallery-img">
             </div>
+
+            <!-- PRODUCT FEATURES -->
+            <ul class="details-list">
+                <li><i class="fa-solid fa-circle-check"></i> <strong>حجم صغير خفيف:</strong> مقاس 13 سم يوضع في الجيب أو الحقيبة بمهارة.</li>
+                <li><i class="fa-solid fa-circle-check"></i> <strong>3 سرعات فائقة:</strong> محرك قوي بدون فرشاة يمنحك هواءً منعشاً.</li>
+                <li><i class="fa-solid fa-circle-check"></i> <strong>قابلة للشحن عبر USB:</strong> بطارية تدوم حتى 2.5 ساعة من الاستخدام المتواصل.</li>
+                <li><i class="fa-solid fa-circle-check"></i> <strong>متعددة الاستخدامات:</strong> مثالية لتبريد الصيف، السفر، والمكتب، وتجفيف الرموش والمكياج للفتيات.</li>
+            </ul>
         </div>
 
-        <!-- ORDER FORM (CASH ON DELIVERY) -->
+        <!-- ORDER FORM -->
         <div class="form-card">
-            <h2 class="form-title">📝 للطلب أدخل معلوماتك أسفله</h2>
+            <h2 class="form-title">📝 أدخل بياناتك لإتمام إتاحة الطلب والتسديد</h2>
             <form id="checkout-form">
                 <div class="form-group">
                     <label>الاسم الكامل:</label>
-                    <input type="text" id="fullname" placeholder="مثال: محمد العلوي" required>
+                    <input type="text" id="fullname" placeholder="مثال: سعد" required>
                 </div>
 
                 <div class="form-group">
@@ -238,7 +278,7 @@
                 </div>
 
                 <button type="submit" class="submit-btn">
-                    <i class="fa-solid fa-cart-shopping"></i> تأكيد الطلب الآن
+                    <i class="fa-solid fa-credit-card"></i> تأكيد الطلب والمتابعة للدفع
                 </button>
             </form>
         </div>
@@ -246,14 +286,14 @@
         <!-- FEATURES SECTION -->
         <div class="features">
             <div class="feature-item">
-                <i class="fa-solid fa-truck-fast"></i>
-                <h3>توصيل سريع</h3>
-                <p>توصيل لجميع المدن المغربية خلال 24-48 ساعة</p>
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>دفع آمن ومسبق</h3>
+                <p>ادفع مسبقاً براحة بال ليتم تجهيز طلبك فوراً</p>
             </div>
             <div class="feature-item">
-                <i class="fa-solid fa-hand-holding-dollar"></i>
-                <h3>الدفع عند الاستلام</h3>
-                <p>لا تدفع شيئاً حتى تستلم المنتج وتتفحصه</p>
+                <i class="fa-solid fa-truck-fast"></i>
+                <h3>توصيل مضمون</h3>
+                <p>يوصلك منتجك أينما صال وجال بسرعة فائقة</p>
             </div>
         </div>
 
@@ -266,11 +306,10 @@
             
             const name = document.getElementById('fullname').value;
             const phone = document.getElementById('phone').value;
-            const city = document.getElementById('city').value;
             
-            alert(`شكراً لك يا ${name}! تم تسجيل طلبك بنجاح. سنتصل بك عبر الرقم (${phone}) لتأكيد الشحن إلى مدينة ${city}.`);
+            alert(`شكراً لك يا ${name}! تم تسجيل بياناتك بنجاح. سنقوم بالتواصل معك عبر الرقم (${phone}) لإكمال عملية الدفع المسبق وترتيب الشحن.`);
             this.reset();
         });
     </script>
 </body>
-              </html>
+</html>
