@@ -1,1 +1,276 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجرنا - عرض خاص واستثنائي</title>
+    <!-- Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
 
+        body {
+            background-color: #f8fafc;
+            color: #0f172a;
+            line-height: 1.6;
+        }
+
+        /* BANNER TOP */
+        .top-bar {
+            background: #ef4444;
+            color: #ffffff;
+            text-align: center;
+            padding: 8px 15px;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        .product-card {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .product-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #1e293b;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        /* MEDIA PLACEHOLDERS */
+        .media-container {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            background: #e2e8f0;
+            position: relative;
+        }
+
+        .product-video, .product-image {
+            width: 100%;
+            display: block;
+            border-radius: 12px;
+        }
+
+        /* PRICE DISPLAY */
+        .price-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin: 20px 0;
+            background: #f1f5f9;
+            padding: 12px;
+            border-radius: 10px;
+        }
+
+        .current-price {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #16a34a;
+        }
+
+        .old-price {
+            font-size: 1.3rem;
+            color: #94a3b8;
+            text-decoration: line-through;
+        }
+
+        /* ORDER FORM */
+        .form-card {
+            background: #ffffff;
+            border: 2px solid #2563eb;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.1);
+        }
+
+        .form-title {
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #1e3a8a;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus {
+            border-color: #2563eb;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: #2563eb;
+            color: #ffffff;
+            border: none;
+            padding: 15px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .submit-btn:hover {
+            background: #1d4ed8;
+        }
+
+        /* ADVANTAGES */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 15px;
+            background: #ffffff;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .feature-item i {
+            font-size: 1.8rem;
+            color: #2563eb;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="top-bar">
+        ⚡ التوصيل مجاني لجميع المدن + الدفع عند الاستلام ⚡
+    </div>
+
+    <div class="container">
+        
+        <!-- PRODUCT DETAILS CARD -->
+        <div class="product-card">
+            <h1 class="product-title" id="product-name">اسم المنتج يوضع هنا</h1>
+            
+            <!-- VIDEO PLACEHOLDER -->
+            <div class="media-container">
+                <video class="product-video" controls autoplay muted loop id="main-video">
+                    <source src="product-video.mp4" type="video/mp4">
+                    متصفحك لا يدعم تشغيل الفيديو.
+                </video>
+            </div>
+
+            <!-- PRICE DISPLAY -->
+            <div class="price-box">
+                <span class="current-price" id="price-display">200 درهم</span>
+                <span class="old-price" id="old-price-display">350 درهم</span>
+            </div>
+
+            <!-- IMAGE PLACEHOLDER -->
+            <div class="media-container">
+                <img src="product-image.jpg" alt="صورة المنتج" class="product-image" id="main-image">
+            </div>
+        </div>
+
+        <!-- ORDER FORM (CASH ON DELIVERY) -->
+        <div class="form-card">
+            <h2 class="form-title">📝 للطلب أدخل معلوماتك أسفله</h2>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label>الاسم الكامل:</label>
+                    <input type="text" id="fullname" placeholder="مثال: محمد العلوي" required>
+                </div>
+
+                <div class="form-group">
+                    <label>رقم الهاتف:</label>
+                    <input type="tel" id="phone" placeholder="06XXXXXXXX" required>
+                </div>
+
+                <div class="form-group">
+                    <label>المدينة:</label>
+                    <input type="text" id="city" placeholder="مدينتك" required>
+                </div>
+
+                <div class="form-group">
+                    <label>العنوان السكني:</label>
+                    <input type="text" id="address" placeholder="الحي / الشارع" required>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class="fa-solid fa-cart-shopping"></i> تأكيد الطلب الآن
+                </button>
+            </form>
+        </div>
+
+        <!-- FEATURES SECTION -->
+        <div class="features">
+            <div class="feature-item">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h3>توصيل سريع</h3>
+                <p>توصيل لجميع المدن المغربية خلال 24-48 ساعة</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                <h3>الدفع عند الاستلام</h3>
+                <p>لا تدفع شيئاً حتى تستلم المنتج وتتفحصه</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        document.getElementById('checkout-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('fullname').value;
+            const phone = document.getElementById('phone').value;
+            const city = document.getElementById('city').value;
+            
+            alert(`شكراً لك يا ${name}! تم تسجيل طلبك بنجاح. سنتصل بك عبر الرقم (${phone}) لتأكيد الشحن إلى مدينة ${city}.`);
+            this.reset();
+        });
+    </script>
+</body>
+              </html>
